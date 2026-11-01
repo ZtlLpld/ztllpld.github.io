@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>火柴人格斗 · Stick Fight Pro</title>
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+<canvas id="game"></canvas>
+
+<div id="nameModal">
+  <input type="text" id="nameInput" maxlength="12" placeholder="请输入名字...">
+  <div id="nameBtnGroup">
+    <button id="nameOk">确认</button>
+    <button id="nameCancel">取消</button>
+  </div>
+</div>
+
+<div id="musicPanel">
+  <div class="mp-card">
+    <div class="mp-title">音乐库 · 歌单连播</div>
+
+    <div class="mp-now" id="mpNow">暂无音乐</div>
+    <div class="mp-row mp-ctl">
+      <button id="mpPrev">上一首</button>
+      <button id="mpPlay">播放</button>
+      <button id="mpNext">下一首</button>
+      <button id="mpToggle">音乐：开</button>
+    </div>
+    <div class="mp-vol-row">
+      <span class="mp-vol-label">音乐音量</span>
+      <input type="range" id="mpVol" min="0" max="100" value="45">
+      <span class="mp-vol-val" id="mpVolVal">45%</span>
+    </div>
+
+    <div class="mp-divider"></div>
+
+    <input type="text" id="mpUrl" placeholder="输入歌曲号或链接，回车加入">
+    <div class="mp-row">
+      <button id="mpPreview">立即试听</button>
+      <button id="mpSave">＋加入歌单</button>
+    </div>
+    <div id="mpMsg"></div>
+
+    <div class="mp-list-title">歌单排序（在线曲播完自动移除并接下一首）</div>
+    <div id="mpList"></div>
+    <div class="mp-row"><button id="mpClose">关闭</button></div>
+  </div>
+</div>
+
+<div class="touch" id="touch">
+  <div class="cluster left">
+    <div class="joy" id="joyBase"><div class="joy-stick" id="joyStick"></div></div>
+  </div>
+  <div class="cluster right">
+    <button class="btn-jump">跳</button>
+    <button class="btn-kick" id="btnKick">踢</button>
+    <button class="btn-punch" id="btnPunch">拳</button>
+  </div>
+</div>
+<button id="touchDone">完成调整</button>
+
+
+<script src="clothes-data.js"></script>
+<script src="game.js"></script>
+<script src="music.js"></script>
+<script src="scene.js"></script>
+<script src="parkour.js"></script>
+
+</body>
+</html>
+<!-- （注：内容由AI生成） -->
